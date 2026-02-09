@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 import requests
 from bs4 import BeautifulSoup
 
-TOKEN = "حط_التوكن_مالتك"
+TOKEN = "8450630765:AAG0oBdaYc9uZavkmEJdoNRXhOwL3ITdG38"
 CHANNEL = "@falconpips"
 
 bot = Bot(token=TOKEN)
@@ -77,3 +77,4 @@ scheduler.add_job(fetch_news, 'cron', hour=0, minute=5)
 
 print("Falcon Pips Bot Running...")
 scheduler.start()
+
