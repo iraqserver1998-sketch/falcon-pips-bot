@@ -35,7 +35,10 @@ def newyork_session():
 scheduler.add_job(asian_session, 'cron', hour=2, minute=0)
 scheduler.add_job(london_session, 'cron', hour=10, minute=0)
 scheduler.add_job(newyork_session, 'cron', hour=15, minute=30)
-scheduler.add_job(asian_session, 'date', run_date=datetime.now() + timedelta(seconds=30))
+from datetime import datetime, timedelta
+
+scheduler.add_job(asian_session, 'date', run_date=datetime.now() + timedelta(seconds=10))
+
 
 
 
@@ -126,4 +129,5 @@ scheduler.add_job(fetch_news, 'cron', hour=0, minute=5)
 # =========================
 print("Falcon Pips Bot Running...")
 scheduler.start()
+
 
