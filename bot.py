@@ -38,9 +38,6 @@ scheduler.add_job(london_session, 'cron', hour=10, minute=0)
 scheduler.add_job(newyork_session, 'cron', hour=15, minute=30)
 
 
-scheduler.add_job(newyork_alert, 'date', run_date=datetime.now() + timedelta(seconds=30), coalesce=True)
-scheduler.add_job(newyork_session, 'date', run_date=datetime.now() + timedelta(seconds=60), coalesce=True)
-
 # =========================
 # دالة جلب الأخبار الاقتصادية المهمة
 # =========================
@@ -128,6 +125,7 @@ scheduler.add_job(fetch_news, 'cron', hour=0, minute=5)
 # =========================
 print("Falcon Pips Bot Running...")
 scheduler.start()
+
 
 
 
